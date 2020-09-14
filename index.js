@@ -5,7 +5,8 @@ $(function() {
     event.preventDefault();
     // Get new shopping item name
     const entry = $('#shopping-list-entry').val();
-
+    $('#shopping-list-entry').val('');
+    
     // Create new shopping item
     $('ul.shopping-list').append(
       `<li>
