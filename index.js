@@ -23,13 +23,13 @@ $(function() {
   });
 
   // Edit an item
-  $('.shopping-item-controls').on('click', '.shopping-item-toggle', function (event) {
+  $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
     //does submit or click work here?
-    this.sibling('.shopping-item').toggleClass('.shopping-item__checked');
+    $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
   });
     
-  $('.shopping-item-controls').on('submit', '.shopping-item-delete', function (event) {
+  $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
     //does submit or click work here?
-    this.closest('li').remove();
+    $(this).closest('li').remove();
   });
 });
